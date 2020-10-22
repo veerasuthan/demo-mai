@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site_logo {
+  height: 40px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  height: 600px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.middle::before,
+.middle::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 155px;
+  background-color: #EBA600;
+}
+
+.middle::before {
+  top: 115px;
+  left: 0;
+  width: 40%;
+  transform: skew(0deg, 10deg);
+}
+
+.middle::after {
+  bottom: 115px;
+  left: 0;
+  left: 0px;
+  width: 40%;
+  transform: skew(0deg, -10deg);
+}
+
+.left-middle {
+  width: 50%;
+  height: 200px;
+  background-color: #EBA600;
+}
+
+.middle .beer-glass {
+  position: absolute;
+  left: 30%;
+  z-index: 1;
+}
+
+.right-middle {
+  position: relative;
+  width: 60%;
+  height: 200px;
+  padding-left: 20%;
+  background-color: #F7F2E8;
+}
+
+.footer {
+  background-color: #F7F2E8;
+  padding: 20px;
+  margin: 20px 0px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.footer-why {
+  background-color: #F7F2E8;
+  padding: 20px;
+  margin: 0px 0px;
+  text-align: left;
+}
+
+.footer-why .footer-ques {
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.footer-why .footer-desc {
+  font-weight: 300;
+  margin: 10px 0px;
+}
+
+/* button */
+.nav-button {
+  outline: 0;
+  width: 260px;
+  height: auto;
+  padding: 10px 20px;
+  border-color: transparent;
+  box-shadow: 2px 3px 6px #00000029;
+  border-radius: 16px;
+  margin: 4px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.close-icon {
+  outline: 0;
+  width: 80px;
+  height: 30px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #EBA600;
+}
+
+.nav-button.primary {
+  color: #fff;
+  background: #EBA600 0% 0% no-repeat padding-box;
+}
+
+.nav-button.secondary {
+  color: #000;
+  border: 1px solid #EBA800;
+}
+
+.nav-button.tri {
+  background: #E6E6E6 0% 0% no-repeat padding-box;
+  box-shadow: 2px 3px 6px #00000029;
+}
+
+.nav-button .btn-icon {
+  position: absolute;
+  top: -4px
+}
+.nav-button .btn-icon.left {
+  left: 0
+}
+.nav-button .btn-icon.right {
+  right: 0
+}
+.nav-button .btn-icon img {
+  width: 44px
+}
+.nav-button .btn-icon.left img {
+  -webkit-filter: brightness(0) invert(0);
+  filter: brightness(0) invert(0);
+  top: -8px;
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+}
+
+/* page */
+.template-wrapper {
+  margin: 15px;
+  padding: 15px;
+}
+.pagination {
+  margin: 10px 0px;
+}
+.content-wrapper {
+  height: 400px;
+}
+.question-wrapper {
+  margin: 15px 0px;
+}
+.question-wrapper .question-text,
+.question-wrapper.hint .question-hint {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.question-wrapper.hint .question-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.action-wrapper {
+  text-align: right;
+}
+
+
+/* Radio group */
+.radiogroup {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row-break {
+  display: block;
+  /* flex-direction: column; */
+  flex-basis: 100%;
+  height: 0;
+  margin: 6px;
+}
+
+.radiogroup .radio {
+  display: flex;
+  flex-direction: column;
+  width: 122px;
+  height: 122px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1px solid #eba600;
+  margin: 4px 8px;
+}
+
+.radiogroup .radio.text_image,
+.radiogroup .radio.text,
+.radiogroup .radio.image_small {
+  border: none
+}
+
+.radiogroup .radio .radio-label-group {
+  display: flex;
+  flex-direction: row;
+  width: 122px;
+  height: 122px;
+  text-align: center;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #eba600;
+  justify-content: center;
+  align-items: center;
+}
+
+.radiogroup .radio.text_image .radio-label-group {
+  flex-direction: column;
+}
+
+.radiogroup .radio.text_image,
+.radiogroup .radio.text_image .radio-label-group {
+  width: 260px;
+  height: 159px;
+}
+
+.radiogroup .radio.text,
+.radiogroup .radio.text .radio-label-group {
+  width: 260px;
+  height: 159px;
+}
+
+.radiogroup .radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radiogroup .radio-image {
+  width: 45px;
+  height: 60px;
+}
+
+.radiogroup .radio-image.colored {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.radiogroup .radio-label {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+.radio.image_small.checked::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 0;
+  background-image: url('./assets/tick.svg');
+  background-size: 18px 18px;
+  background-position: 2px 2px;
+  background-color: #EBA600;
+  border-radius: 50%;
+}
+.radio.text.checked,
+.radio.text_image.checked {
+  background: #F7F2E8 0% 0% no-repeat padding-box;
+}
+
+/* range slider */
+.range-slider {
+  margin: 12px;
+  padding: 12px;
+}
+
+.range-slider img {
+  width: 32px;
+  height: 32px;
+}
+.range-slider .slider-left,
+.range-slider .slider,
+.range-slider .slider-right {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.range-slider .slider {
+  min-width: 300px;
+  cursor: pointer;
+}
+.range-slider .slider-left span,
+.range-slider .slider-right span {
+  display: block;
+}
+.range-slider .hint {
+  color: #EBA600;
+}
+.range-slider .desc {
+  max-width: 156px;
+  font-size: 10px;
+}
+
+/* numeric selector */
+.numeric-selector button {
+  width: 30px;
+  height: 30px;
+  background: #F7F2E8 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 12px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+.numeric-selector button:focus {
+  outline: 0;
+}
+.numeric-selector .value-holder {
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
