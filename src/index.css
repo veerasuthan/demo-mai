@@ -122,6 +122,12 @@ header {
   margin: 10px;
 }
 
+.nav-button:disabled {
+  background-color: #ccc !important;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 .close-icon {
   outline: 0;
   width: 80px;

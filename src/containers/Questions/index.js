@@ -20,7 +20,9 @@ function Questions(props) {
 
     const questionData = questions[questionIndex]
     const { id, question, question_hint,
-        question_type, answers, answer_type, why_answer } = questionData
+        question_type, answers, answer_type, why_answer, mandatory } = questionData
+    const user_value = user_response[id] || null;
+
 
     return (
         <>
@@ -38,7 +40,7 @@ function Questions(props) {
                             [id]: value
                         }))
                     }}
-                    selectedValue={user_response[id] || null}
+                    selectedValue={user_value}
                 />
             </div>
             <div class="action-wrapper">
@@ -56,6 +58,7 @@ function Questions(props) {
                 />
                 <Button
                     className="nav-button primary arrow-right"
+                    disabled={mandatory && user_value === null}
                     text="Next"
                     arrow="right"
                     onClick={() => {
